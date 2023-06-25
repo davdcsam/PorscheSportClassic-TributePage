@@ -1,12 +1,31 @@
 :root {
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+    --first-font-family: 'Bebas Neue', sans-serif;
+    --second-font-family: 'Roboto Slab', serif;
+
+    --first-size: 10px;
+    --second-size: 14px;
+    --third-size: 18px;
+    --fourth-size: 24px;
+    --fifth-size: 52px;
+    --sixth-size: 80px;
+    --seventh-size: 100px; 
+
+    --first-color: black;
+    --second-color: #1d1d1d;
+    --third-color: white;
+
 }
 
 body {
     display: grid;
     grid-template-rows: repeat( 6, 100vh);
+    font-family: var(--second-font-family);
     margin: 0px;
+    overflow-x: hidden;
+    background-color: var(--second-color);
+    color: var(--third-color);
 }
 
 #title-container {
@@ -14,32 +33,111 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: auto 20vh auto;
+    grid-template-rows: 30% 20vh auto;
 }
 
     #title {
         grid-area: 2 / 1 / 3 / 2;
         display: grid;
-        grid-template-rows: 30% 70%;
+        grid-template-rows: 50% 60%;
+        font-family: var(--first-font-family);
+        align-items: center;
     }
 
         #title-text-small {
             grid-area: 1 / 1 / 2 / 2;
+            font-size: var(--fifth-size);
+            margin-left: var(--third-size);
         }
 
         #title-text-big {
             grid-area: 2 / 1 / 3 / 2;
+            font-size: var(--seventh-size);
+            margin-left: var(--third-size);
         }
 
         #title-bar {
             grid-area: 1 / 1 / 3 / 2;
+            height: 65%;
             align-self: center;
             z-index: -1;
             background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 20%, rgba(252,176,69,1) 40%, rgba(252,176,69,1) 60%, rgba(253,29,29,1) 80%, rgba(131,58,180,1) 100%);
             background-size: 400%;
             animation: title-bar 60s ease infinite;
-            height: 70%;
+
         }
+    
+    #image {
+        grid-area: 2 / 1 / 3 / 2;
+        width: 750px;
+        margin: 0px -50px -200px 0px;
+        align-self: center;
+        justify-self: end;
+
+
+    }
+
+#img-div {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto 10vh 30vh auto;
+    background-color: var(--third-color);
+    color: var(--first-color);
+}
+
+    #image-figure {
+        width: 800px;
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    #img-caption {
+        display: none;
+    }
+
+    #image-sticker {
+        grid-area: 2 / 2 / 3 / 3;
+        width: 80%;
+        margin-bottom: var(--third-size);
+        align-self: end;
+    }
+
+    #presenting-text {
+        grid-area: 3 / 2 / 4 / 3;
+        font-size: var(--third-size);
+        width: 80%;
+        line-height: 1.8em;
+        align-self: start;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+#inspiration {
+    grid: 3 / 1 / 4 / 2;
+    width: 100%;
+    height: 100%;
+
+
+    background-color: bisque;
+}
+
+
+h1, h2, h3, p {
+    all: unset;
+
+}
 
 @keyframes title-bar {
     0% {
