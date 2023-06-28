@@ -28,6 +28,24 @@ body {
     color: var(--third-color);
 }
 
+    .title-small {
+        font-family: var(--first-font-family);
+        font-size: var(--fifth-size);
+        margin-left: var(--third-size);
+    }
+
+    .title-big {
+        font-family: var(--first-font-family);
+        font-size: var(--seventh-size);
+        margin-left: var(--third-size);
+    }
+
+    .paragraph-style {
+        font-size: var(--third-size);
+        line-height: 1.8em;
+        text-align: center;
+    }
+
 #title-container {
     grid-area: 1 / 1 / 2 / 2;
     width: 100%;
@@ -40,20 +58,15 @@ body {
         grid-area: 2 / 1 / 3 / 2;
         display: grid;
         grid-template-rows: 50% 60%;
-        font-family: var(--first-font-family);
         align-items: center;
     }
 
-        #title-text-small {
+        #title-presenting-small {
             grid-area: 1 / 1 / 2 / 2;
-            font-size: var(--fifth-size);
-            margin-left: var(--third-size);
         }
 
-        #title-text-big {
+        #title-presenting-big {
             grid-area: 2 / 1 / 3 / 2;
-            font-size: var(--seventh-size);
-            margin-left: var(--third-size);
         }
 
         #title-bar {
@@ -109,32 +122,63 @@ body {
 
     #presenting-text {
         grid-area: 3 / 2 / 4 / 3;
-        font-size: var(--third-size);
         width: 80%;
-        line-height: 1.8em;
         align-self: start;
-        text-align: center;
     }
-
-
-
-
-
-
-
-
 
 #inspiration {
     grid: 3 / 1 / 4 / 2;
     width: 100%;
     height: 100%;
-
-
-    background-color: bisque;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat( 3, auto);
+    grid-template-rows: repeat( 3, auto);
 }
 
+    #inspiration-title {
+        grid-area: 1 / 1 / 2 / 4;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        padding-top: 2.5%;
+    }
 
-h1, h2, h3, p {
+        #title-inspiration-small {
+            grid-area: 1 / 1 / 2 / 2;
+            align-self: end;
+        }
+
+        #title-inspiration-big {
+            align-self: start;
+            grid-area: 2 / 1 / 3 / 2;
+        } 
+
+    #inspiration-section-pics {
+        grid-area: 2 / 1 / 3 / 4;
+        display: flex;
+        flex-direction: row;
+    }  
+
+        .image-size {
+            width: calc( 100% / 3);
+            object-fit: cover;
+        }
+
+        .image-size:hover {
+            animation: grow-scale-inspiration 1s ease 0s forwards;
+        }
+
+    #inspiration-info {
+        grid-area: 3 / 1 / 4 / 4;
+        display: grid;
+        grid-template-columns: repeat( 2, auto);
+    }
+
+        #inspiration-info > p {
+            padding: 7.5%;
+        }
+
+h1, h2, p {
     all: unset;
 
 }
@@ -151,4 +195,10 @@ h1, h2, h3, p {
     100% {
         background-position: 0% 50%;
     }
-}        
+} 
+
+@keyframes grow-scale-inspiration {
+    100% {
+        scale: 1.05;
+    }
+}
