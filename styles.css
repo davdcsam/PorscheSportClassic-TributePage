@@ -1,491 +1,420 @@
- :root {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(236,236,236,1) 100%);
-    overflow-x: hidden;
-    color: rgb(0, 0, 0);
-    --main-font-family: 'Roboto Condensed', sans-serif;
-    --secundary-font-family: sans-serif;
-    --background-color: linear-gradient(160deg, rgb(255, 254, 254) 0%, rgb(248, 248, 248) 100%);
-    --main-color-text: rgb(0, 0, 0);
-    --secundary-color-text: #111111;
-    --contrast-color: white;
+:root {
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    --first-font-family: 'Bebas Neue', sans-serif;
+    --second-font-family: 'Roboto Slab', serif;
+
+    --first-size: 10px;
+    --second-size: 14px;
+    --third-size: 18px;
+    --fourth-size: 24px;
+    --fifth-size: 34px;
+    --sixth-size: 52px;
+    --seventh-size: 100px; 
+
+    --first-color: black;
+    --second-color: rgb(17, 17, 17);
+    --third-color: white;
+
 }
 
+body {
+    display: grid;
+    grid-template-rows: repeat( 6, 100vh) 500px;
+    font-family: var(--second-font-family);
+    margin: 0px;
+    overflow-x: hidden;
+    direction: ltr;
+    background-color: var(--second-color);
+    color: var(--third-color);
+}
+
+    .title-small {
+        font-family: var(--first-font-family);
+        font-size: var(--sixth-size);
+        margin-left: var(--fifth-size);
+    }
+
+    .title-big {
+        font-family: var(--first-font-family);
+        font-size: var(--seventh-size);
+        margin-left: var(--fifth-size);
+    }
+
+    .paragraph-style {
+        font-size: var(--third-size);
+        line-height: 1.8em;
+        text-align: center;
+    }
+
+    .center-style {
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+
 #title-container {
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);;
+    grid-area: 1 / 1 / 2 / 2;
     width: 100%;
-    padding-left: 3%;
-    position: relative;
-    top: 5vw;
-    left: -1vw;
-    z-index: 1;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 20vh auto 15%;
 }
 
     #title {
-        color: black;
-        position: inherit;
-        font-family: Bebas Neue, cursive;
-        font-weight: 300;
-        line-height: .5em;
-        font-size: 3vw;
+        grid-area: 2 / 1 / 3 / 2;
+        display: grid;
+        grid-template-rows: 50% 60%;
+        align-items: center;
     }
 
-    #title-bigger {
-        color: black;
-        position: inherit;
-        font-family: Bebas Neue, cursive;
-        font-weight: 600;
-        font-size: 7vw;
-        line-height: 1vw;
-}
-
-#img-div {
-    position: relative;
-    z-index: 2;
-    top: -120px;
-    right: -22vw;
-}
-
-    #image {
-        display: block;
-        position: inherit;
-        text-align: center;
-        width: 100vw;
-        max-width: 100%;
-        height: auto; 
-    }
-
-        #img-caption {
-            display: none;
+        #title-presenting-small {
+            grid-area: 1 / 1 / 2 / 2;
         }
 
-    #presenting-text-form {
-        font-family: Roboto Slab, serif;
-        font-size: 1.2vw;
-        line-height: 1.8em;
-        width: 30vw;
-        position: relative;
-        bottom: 45vh;
-        right: 20vw;
+        #title-presenting-big {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        #title-bar {
+            grid-area: 1 / 1 / 3 / 2;
+            height: 65%;
+            align-self: center;
+            z-index: -1;
+            background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 20%, rgba(252,176,69,1) 40%, rgba(252,176,69,1) 60%, rgba(253,29,29,1) 80%, rgba(131,58,180,1) 100%);
+            background-size: 400%;
+            animation: title-bar 15s ease infinite;
+        }
+    
+    #image {
+        grid-area: 2 / 1 / 3 / 2;
+        width: 900px;
+        margin: 400px 0px 0px 0px;
+        align-self: center;
+        justify-self: end;
     }
 
+    #img-caption {
+        display: none;
+    }
 
+    #paragraph-presenting {
+        grid-area: 3 / 1 / 4 / 2;
+        padding: 50px 0px 0px 50px;
+        width: 30%;
+    }
 
-.text-form {
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    top: -50px;
+#img-div {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto 10vh 30vh auto;
+    background-color: var(--third-color);
+    color: var(--first-color);
 }
 
-    #image-content {
-        position: inherit;
-        width: 100vw;
-        right: 30vw;
+    #image-figure {
+        width: 800px;
+        grid-area: 2 / 1 / 4 / 2;
     }
 
-    #tribute-info {
-        font-family: Roboto Slab, serif;
-        font-size: 1.2vw;
-        line-height: 1.8em;
-        position: inherit;
-        float: right;
-        width: 35vw;
-        right: 5vw;
-        bottom: 28vw;
+    #image-sticker {
+        grid-area: 2 / 2 / 3 / 3;
+        width: 600px;
+        margin-bottom: var(--third-size);
+        align-self: end;
     }
 
-#inspiration-section {
-    position: relative;
-    top: -200px;
-    margin-bottom: 10vh;
+    #presenting-text {
+        grid-area: 3 / 2 / 4 / 3;
+        width: 80%;
+        align-self: start;
+    }
+
+#inspiration {
+    grid: 3 / 1 / 4 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat( 3, auto);
+    grid-template-rows: repeat( 3, auto);
 }
 
-    #second-title {
-        font-family: Bebas Neue, cursive;
-        font-size: 3vw;
-        line-height: 0vw;
-        font-weight: 200;
-        color: black;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    #inspiration-title {
+        grid-area: 1 / 1 / 2 / 4;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        padding-top: 2.5%;
     }
 
-    #second-title-bigger {
-        font-family: Bebas Neue, cursive;
-        font-size: 7vw;
-        font-weight: 300;
-        line-height: 0vw;
-        color: black;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+        #title-inspiration-small {
+            grid-area: 1 / 1 / 2 / 2;
+            align-self: end;
+        }
+
+        #title-inspiration-big {
+            align-self: start;
+            grid-area: 2 / 1 / 3 / 2;
+        } 
 
     #inspiration-section-pics {
-        width: 100vw;
+        grid-area: 2 / 1 / 3 / 4;
         display: flex;
-    }
+        flex-direction: row;
+    }  
 
         .image-size {
-            width: 33%;
-            height: auto;
+            width: calc( 100% / 3);
             object-fit: cover;
         }
 
         .image-size:hover {
-            animation: grow-scale-2 1s ease forwards;
+            animation: grow-scale-inspiration 1s ease 0s forwards;
         }
 
-    #inspiration-section-info {
-        font-family: Roboto Slab, serif;
-        font-size: 1.2vw;
-        line-height: 1.8em;
-        display: flex;
-        justify-content: space-around;
-}
-
-        .inspiration-paragraph {
-            width: 40vw;
-            height: auto;
-        }
-
-#title-gallery {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    top: -30vh;
-    align-items: center;
-}
-
-    #title-for-gallery {
-        font-family: Bebas Neue, cursive;
-        font-size: 7vmax;
-        font-weight: 300;
-        line-height: 0vw;
-        color: black;
-    }
-
-    #tribute-link {
-        background-color: rgba(0, 0, 0, 0.8);
-        text-decoration: none;
-        color: white;
-        font-family: Exo, sans-serif;
-        font-size: 2vw;
-        width: 100px;
-        height: 1.5em;
-        padding: 0.5em;
-    }
-
-    #tribute-link:hover {
-        animation: for-tribute-link 1s ease forwards;
-    }
-
-#gallery-car-pics {
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);   
-    position: relative;
-    top: -35vh;
-    margin: 0px;
-}
-
-    #pics {
+    #inspiration-info {
+        grid-area: 3 / 1 / 4 / 4;
         display: grid;
-        grid-template-columns: repeat( 5, 1fr);
-        grid-template-rows: repeat( 4, 1fr);
+        grid-template-columns: repeat( 2, auto);
+    }
+
+        #inspiration-info > p {
+            padding: 7.5%;
+        }
+
+#gallery {
+    grid-area: 4 / 1 / 5 / 2;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-top: 7.5%;
+    grid-template-columns: repeat( 2, 50vw);
+    grid-template-rows: 15vh auto;
+}
+
+    #gallery-title {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    #porsche-logotipo {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 400px;
+        filter: invert(1);
+    }
+
+    #container-gallery {
+        grid-area: 2 / 1 / 3 / 3;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
     }
 
         .element-gallery {
             width: 100%;
-            height: 100%;
-            object-fit: cover; 
+            height: 75%;
+            object-fit: cover;
         }
 
-            #element-1 { grid-area: 1/4/3/6;}
-            #element-2 { grid-area: 3/1/5/3}
-            #element-3 { grid-area: 1/1/3/4;}
-            #element-4 { grid-area: 3/3/5/6;}
-            #element-5 { grid-area: 5/1/6/3;}
-            #element-6 { grid-area: 5/3/6/5;}
-            #more-img {
-                text-decoration: none;
-                background-color: rgba(0, 0, 0, 0.737);
-                color: white;
-                font-family: EXO, cursive;
-                font-size: 2vw;
-                display: inherit;
-                align-items: center;
-                text-align: center;
-                opacity: 0.9;
-            }
+        #element-1 {
+            grid-area: 1 / 1 / 2 / 2;
+            animation: gallery-hidden-item 12s ease 0s infinite;
+        }
 
-            #more-img:hover {
-                animation: opacity 1s ease forwards;
-            }
+        #element-2 {
+            grid-area: 1 / 2 / 1 / 3;
+            animation: gallery-hidden-item 12s ease 0s infinite;
+        }
+
+        #element-3 {
+            grid-area: 1 / 1 / 2 / 2;
+            animation: gallery-hidden-item 12s ease 4s infinite;
+        }
+
+        #element-4 {
+            grid-area: 1 / 2 / 1 / 3;
+            animation: gallery-hidden-item 12s ease 4s infinite;
+        }
+
+        #element-5 {
+            grid-area: 1 / 1 / 2 / 2;
+            animation: gallery-hidden-item 12s ease 8s infinite;
+        }
+
+        #element-6 {
+            grid-area: 1 / 2 / 1 / 3;
+            animation: gallery-hidden-item 12s ease 8s infinite;
+        }
 
 #technical-specs {
-    position: relative;
-    bottom: 10vh;
+    grid-area: 5 / 1 / 6 / 2;
+    display: grid;
+    grid-template-columns: repeat( 3, 33.33vw);
+    grid-template-rows: 20vh auto;
+    height: 100%;
 }
 
-    #main-specs {
-        font-family: Roboto Slab, serif;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        align-items: center;
-        text-align: center;
+    #technical-title {
+        grid-area: 1 / 1 / 2 / 4;
     }
 
-        .main-specs-header {
-            font-size: 3vw;
-        }
-
-            .main-specs-header:hover {
-                animation: grow-scale-3 1s ease forwards;
+            .technical-title {
+                font-size: var(--fifth-size);
+                grid-area: 1 / 1 / 2 / 2;
             }
 
-        .main-specs-explain {
-            font-size: 1vw;
-            opacity: 0.9;
-        }
-    
-    #detail-specs {
-        font-family: Roboto Slab, serif;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr 2fr;
-        text-align: center;
-        line-height: 2em;
-    }
+            .technical-container {
+                grid-area: 2 / 1 / 3 / 2;
+                font-size: var(--third-size);
+                display: grid;
+                padding: var(--fifth-size) var(--sixth-size);
+            }
+                
+                .technical-title-content {
+                    float: left;
+                    font-weight: 600;
+                }
 
-        #power-unit { 
-            grid-area: 1/1/1/3;
-            font-size: 2vw;
-            align-self: end;
-        }
+                .technical-text-content {
+                    float: right;
+                }
 
-        #performance { 
-            grid-area: 1/3/1/5;
-            font-size: 2vw;
-            align-self: end;
-        }
-        #body { 
-            grid-area: 1/5/1/7;
-            font-size: 2vw;
-            align-self: end;
+            .technical-content-grid {
+                display: grid;
+                margin: 2px;
+                grid-template-rows: 10vh auto;
+            }
+
+        #power-unit {
+            grid-area: 2 / 1 / 3 / 2;
+            text-align: center;
         }
 
-        #list-power-unit, #list-performance, #list-body-dimention {
-            list-style: none;
-            font-weight: 800;
-            text-align: start;
+        #performance {
+            grid-area: 2 / 2 / 3 / 3;
+            text-align: center;
         }
 
-        #co-list-power-unit, #co-list-performance, #co-list-body-dimention {
-            list-style: none;
-            text-align: start;
-            opacity: 0.9;
-        }
 
-        li:hover {
-            animation: grow-scale-3 1s ease forwards;
+        #body {
+            grid-area: 2 / 3 / 3 / 4;
+            text-align: center;
         }
 
 #resume {
-    font-family: Roboto Slab, serif;
-    line-height: 2em;
-    height: 30vh;
-    margin-bottom: 10vh;
+    grid-area: 6 / 1 / 7 / 2;
     display: grid;
-    grid-template-rows: 3fr 1fr;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-}   
-
-    #text-resumen {
-        width: 30vw;
-    }
-
-    #go-to-buy-one {
-        text-decoration: none;
-        background-color: rgba(0, 0, 0, 0.952);
-        color: white;
-        font-family: EXO, cursive;
-        padding: 1em;
-        align-items: center;
-        align-self: center;
-    }
-
-    #go-to-buy-one:hover {
-        animation: grow-scale-3 1s ease forwards;
-    }
-
-/*footer {
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    color: white;
-    font-family: Roboto Slab, serif;
-    font-size: 50px;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: auto auto auto;
+    background-color: var(--third-color);
 }
 
-*/
+    #resume-image {
+        grid-area: 3 / 1 / 4 / 2;
+        width: 100vw;
+        align-self: end;
+        justify-self: center;
+    }
+
+    #text-resume {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 30vw;
+        align-self: end;
+        color: var(--first-color);
+    }
+
+    #buttom-buy {
+        grid-area: 2 / 1 / 3 / 2;
+        font-size: var(--third-size);
+        text-decoration: none;
+        background-color: var(--second-color);
+        color: white;
+        padding: 1em 3em 1em 3em;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #buttom-buy:hover {
+        animation:grow-scale-resume-buttom 1s ease forwards;
+    }
 
 #footer {
-    background: var(--background-color);
-    color: var(--secundary-color-text);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    line-height: 1.5em;
-    font-family: var(--secundary-font-family);
-    font-size: 16px;
+    grid-area: 7 / 1 / 8 / 2;
     display: grid;
-    display: non;
-    grid-template-columns: 2fr repeat(2, 1fr);
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: repeat( 3, 1fr 4fr) 1fr;
+    grid-template-rows:  1fr 1fr 1fr 28px;
+    background-color: rgb(17, 17, 17);
 }
 
-.icon-footer {
-    width: 16px;
-    height: 16px;
-}
+    .title-footer {
+        align-self: end;
+        font-size: 40px;
+        padding-left: 20px;
+    }
 
-#presenting-title-footer {
-    grid-area: 1/1/1/2;
-    font-size: 50px;
-}
+    .paragraph-footer {
+        padding: 20px;
+        font-size: 18px;
+    }
 
-#presenting-text-footer {
-    grid-area: 2/1/2/2;
-    padding-left: 40px;
-    padding-top: 1em;
-}
+    #footer-space-bar {
+        grid-area: 1 / 1 / 2 / 8;
+    }
 
-.title-footer {
-    font-size: 24px;
-    font-weight: 600;
-    align-self: end;
-    padding-left: 40px;
-    padding-top: 20px;
-    color: var(--main-color-text);
-}
+    #footer-title-description {
+        grid-area: 2 / 2 / 3 / 3;
+        font-size: 60px;
+    }
 
-#first-title-footer {
-    grid-area: 1/2/1/3;
-    align-self: end;
-}
+        #footer-content-description {
+            grid-area: 3 / 2 / 4 / 3;
+        }
 
-#second-title-footer {
-    grid-area: 1/3/1/4;
-}
+    #footer-title-academic {
+        grid-area: 2 / 4 / 3 / 5;
+    }
 
-#academic-info-footer {
-    grid-area: 2/2/2/3;
-}
+        #footer-content-academic {
+            grid-area: 3 / 4 / 4 / 5;
+            display: flex;
+            flex-direction: column;
+        }
 
-#contact-info-footer {
-    grid-area: 2/3/2/4;
-}
+    #footer-title-contact {
+        grid-area: 2 / 6 / 3 / 7;
+    }
 
-li {
-    list-style: none;
-}
+        #footer-content-contact {
+            grid-area: 3 / 6 / 4 / 7;
+            display: flex;
+            flex-direction: column;
+        }
 
-li:hover {
-    animation: grow-scale 500ms ease forwards;
+    #footer-down-bar {
+        grid-area: 4 / 1 / 5 / 8;
+        width: 100%;
+        height: 100%;
+        align-self: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+    }
+
+h1, h2, h3 {
+    all: unset;
 }
 
 a {
     text-decoration: none;
-    color: var(--main-color-text);
+    color: var(--third-color);
 }
 
-#down-bar {
-    grid-area: 3/1/3/4;
-    text-align: center;
-    padding: 1em 0 1em 0;
-    color: var(--contrast-color);
-    background: var(--main-color-text);
+#mobile-no-available {
+    width: 0px;
+    height: 0px;
 }
-
-#contrast-color {
-    color: var(--contrast-color);
-}
-
-@media screen and (max-width: 1200px) {
-    #presenting-text-form {
-        display: none;
-    }
-
-    #title-bigger {
-        font-size: 6vw;
-    }
-
-    #image {
-        scale: 0.8;
-    }
-
-    #inspiration-section {
-        top: -100px;
-        margin-bottom: 20vh;
-    }
-
-    #title-gallery {
-        margin-bottom: 5vh;
-    }
-
-    #technical-specs {
-        bottom: 25vh;
-    }
-
-    #detail-specs {
-        margin-top: -25vh;
-    }
-
-    .main-specs-explain {
-        font-size: 2vw;
-    }
-}
-
-
-@keyframes grow-scale-2 {
-    100% {
-        scale: 1.2;
-    }
-}
-
-@keyframes grow-scale-3 {
-    100% {
-        scale: 1.1;
-    }
-}
-
-@keyframes for-tribute-link {
-    100% {
-        padding: 0.7em;
-    }
-}
-
-
-@keyframes opacity {
-
-    100% {
-        opacity: 1;
-    }
-}
-
-    /*  
-    Fonts for the Proyect
-        font-family: 'Bebas Neue', cursive;
-        font-family: 'Roboto Slab', serif; 
-
-
-    Gallery for the Project
-
-        used https://www.motortrend.com/news/1973-porsche-911-carrera-rsh-2-7-auction-sale?galleryimageid=70b35649-4233-48b0-8e95-c88d9e25dbd8
-
-        used https://www.caranddriver.com/photos/g39837520/2023-porsche-911-sport-classic-revealed-gallery/
-

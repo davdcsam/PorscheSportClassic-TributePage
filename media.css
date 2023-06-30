@@ -1,0 +1,353 @@
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    :root {
+        --first-size: 10px;
+        --second-size: 10px;
+        --third-size: 14.5px;
+        --fourth-size: 34px;
+        --fifth-size: 34px;
+        --sixth-size: 48px;
+        --seventh-size: 90px; 
+    }
+    
+    #image {
+        width: 750px;
+    }
+
+    #image-figure {
+        width: 650px;
+    }
+
+    #image-sticker {
+        width: 500px;
+    }
+
+    #porsche-logotipo {
+        width: 300px;
+    }
+
+    .title-footer {
+        padding-left: 20px;
+    }
+
+    .paragraph-footer {
+        font-size: 16px;
+    }
+
+    #footer-title-description {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+    :root {
+        --first-size: 10px;
+        --second-size: 12px;
+        --third-size: 13px;
+        --fourth-size: 34px;
+        --fifth-size: 34px;
+        --sixth-size: 42px;
+        --seventh-size: 80px; 
+    }
+
+    #image {
+        width: 700px;
+    }
+
+    #image-figure {
+        width: 600px;
+    }
+
+    #image-sticker {
+        width: 400px;
+    }
+
+    #porsche-logotipo {
+        width: 260px;
+    }
+
+    .title-footer {
+        font-size: 26px;
+    }
+
+    .paragraph-footer {
+        font-size: 14px;
+    }
+
+    #footer-title-description {
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+    :root {
+        --first-size: 10px;
+        --second-size: 12px;
+        --third-size: 13px;
+        --fourth-size: 34px;
+        --fifth-size: 34px;
+        --sixth-size: 42px;
+        --seventh-size: 80px; 
+    }
+
+    body {
+        grid-template-rows: repeat( 5, 80vh) 90vh 400px;
+    }
+
+    #title-container {
+        grid-template-rows: 15% 15vh auto 15%;
+    }
+
+    #image {
+        width: 640px;
+    }
+
+    #image-figure {
+        width: 600px;
+    }
+
+    #image-sticker {
+        width: 350px;
+    }
+
+    #porsche-logotipo {
+        width: 260px;
+    }
+
+    #technical-specs {
+        grid-template-rows: 15vh auto;
+    }
+
+    #footer {
+        grid-template-columns: repeat( 3, 1fr 5fr) 1fr;
+        grid-template-rows:  0.5fr 1fr 1.2fr 22px;
+    }
+
+        .title-footer {
+            font-size: 26px;
+        }
+
+        .paragraph-footer {
+            font-size: 14px;
+        }
+
+        #footer-title-description {
+            font-size: 42px;
+        }
+}
+
+@media screen and (min-width: 880px) and (max-width: 1000px) {
+    :root {
+        --first-size: 8px;
+        --second-size: 10px;
+        --third-size: 12px;
+        --fourth-size: 34px;
+        --fifth-size: 34px;
+        --sixth-size: 50px;
+        --seventh-size: 70px; 
+    }
+
+    body {
+        grid-template-rows: repeat( 5, 80vh) 90vh 400px;
+    }
+
+    #title-container {
+        grid-template-rows: 15% 15vh auto 15%;
+    }
+    
+    #image {
+        width: 550px;
+        margin: 300px 0px 0px 0px;
+    }
+
+    #image-figure {
+        width: 500px;
+    }
+
+    #image-sticker {
+        width: 325px;
+    }
+
+    #porsche-logotipo {
+        width: 250px;
+    }
+
+    #technical-specs {
+        grid-template-rows: 15vh auto;
+    }
+
+    #footer {
+        grid-template-columns: repeat( 3, 1fr 5fr) 1fr;
+        grid-template-rows:  0.5fr 1fr 1.2fr 22px;
+    }
+
+        .title-footer {
+            font-size: 22px;
+        }
+
+        .paragraph-footer {
+            font-size: 12px;
+        }
+
+        #footer-title-description {
+            font-size: 38px;
+        }
+}
+
+@media screen and (min-width: 700px) and (max-width: 880px) {
+    :root {
+        --first-size: 8px;
+        --second-size: 8px;
+        --third-size: 10px;
+        --fourth-size: 24px;
+        --fifth-size: 30px;
+        --sixth-size: 40px;
+        --seventh-size: 60px; 
+    }
+
+    body {
+        grid-template-rows: repeat( 5, 80vh) 90vh 400px;
+    }
+
+    #title-container {
+        grid-template-rows: 15% 15vh auto 15%;
+    }
+    
+    #image {
+        width: 450px;
+        margin: 250px 0px 0px 0px;
+    }
+
+    #image-figure {
+        width: 400px;
+    }
+
+    #image-sticker {
+        width: 250px;
+    }
+
+    #porsche-logotipo {
+        width: 150px;
+    }
+
+    #technical-specs {
+        grid-template-rows: 15vh auto;
+    }
+
+    .technical-container {
+        padding: var(--fourth-size) var(--fourth-size);
+    }
+
+    #footer {
+        grid-template-columns: repeat( 3, 1fr 5fr) 1fr;
+        grid-template-rows:  0.5fr 1fr 1.2fr 22px;
+    }
+
+        .title-footer {
+            font-size: 20px;
+        }
+
+        .paragraph-footer {
+            font-size: 12px;
+        }
+
+        #footer-title-description {
+            font-size: 32px;
+        }
+}
+
+@media screen and (min-width: 100px) and (max-width: 700px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #main, #footer {
+        display: none;
+    }
+
+    #mobile-no-available {
+        font-size: 6vw;
+        width: 100%;
+        text-align: center;
+        margin-top: 50%;
+    }
+
+
+}
+
+
+
+
+/* INCOMPLETE QUARY FOR SMALL TABLET AND MOBILE DISPLAY
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    :root {
+        --first-size: 8px;
+        --second-size: 8px;
+        --third-size: 12px;
+        --fourth-size: 22px;
+        --fifth-size: 28px;
+        --sixth-size: 35px;
+        --seventh-size: 50px; 
+    }
+
+    body {
+        grid-template-rows: repeat( 5, 55vh) 50vh 400px;
+    }
+
+    #title-container {
+        grid-template-rows: 15% 10vh auto 15%;
+    }
+    
+    #paragraph-presenting {
+        padding: 20px 0px 0px 30px;
+        width: 30%;
+    }
+
+    #image {
+        width: 400px;
+        margin: 250px 0px 0px 0px;
+    }
+
+    #image-figure {
+        width: 400px;
+    }
+
+    #image-sticker {
+        width: 250px;
+    }
+
+    #porsche-logotipo {
+        width: 150px;
+    }
+
+    #technical-specs {
+        grid-template-rows: 15vh auto;
+    }
+
+    .technical-container {
+        padding: var(--fourth-size) var(--fourth-size);
+    }
+
+    #footer {
+        grid-template-columns: repeat( 3, 1fr 5fr) 1fr;
+        grid-template-rows:  0.5fr 1fr 1.2fr 22px;
+    }
+
+        .title-footer {
+            font-size: 20px;
+        }
+
+        .paragraph-footer {
+            font-size: 12px;
+        }
+
+        #footer-title-description {
+            font-size: 32px;
+        }
+}
+
+*/ 

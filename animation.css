@@ -1,0 +1,56 @@
+
+@keyframes title-bar {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} 
+
+@keyframes grow-scale-inspiration {
+    100% {
+        scale: 1.05;
+    }
+}
+
+@keyframes gallery-hidden-item {
+    0% {
+        opacity: 0%;
+    }
+
+    3.33% {
+        opacity: 100%;
+    }
+
+    30% {
+        opacity: 100%;
+    }
+
+    33.33% {
+        opacity: 0%;
+    }
+
+    66.66% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes grow-scale-resume-buttom {
+    100% {
+        scale: 1.1;
+        color: #1d1d1d;
+        padding-left: 8em;
+        padding-right: 8em;
+        background-color: var(--third-color);
+    }
+}
