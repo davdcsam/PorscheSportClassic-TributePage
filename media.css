@@ -256,31 +256,6 @@
         }
 }
 
-@media screen and (min-width: 100px) and (max-width: 700px) {
-
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    #main, #footer {
-        display: none;
-    }
-
-    #mobile-no-available {
-        font-size: 6vw;
-        width: 100%;
-        text-align: center;
-        margin-top: 50%;
-    }
-
-
-}
-
-
-
-
 /* INCOMPLETE QUARY FOR SMALL TABLET AND MOBILE DISPLAY
 
 @media screen and (min-width: 600px) and (max-width: 700px) {

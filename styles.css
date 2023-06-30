@@ -412,8 +412,3 @@ a {
     text-decoration: none;
     color: var(--third-color);
 }
-
-#mobile-no-available {
-    width: 0px;
-    height: 0px;
-}
