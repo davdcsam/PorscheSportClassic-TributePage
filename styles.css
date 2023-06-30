@@ -348,7 +348,6 @@ body {
     display: grid;
     grid-template-columns: repeat( 3, 1fr 4fr) 1fr;
     grid-template-rows:  1fr 1fr 1fr 28px;
-    background-color: rgb(17, 17, 17);
 }
 
     .title-footer {
