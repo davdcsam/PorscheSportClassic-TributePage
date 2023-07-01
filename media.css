@@ -202,6 +202,8 @@
         width: 100% !important;
         overflow-x: hidden !important; 
     }
+
+
 }
 
 @media screen and (min-width: 700px) and (max-width: 880px) {
@@ -344,18 +346,28 @@
             padding: 0px;
             width: 70%;
             height: 80%;
-            align-self: center;
+            align-self: start;
             justify-self: center;
             text-align: left;
+
         }
 
         #general-specs {
             grid-area: 4 / 2 / 6 / 3;
+            flex-direction: column;
             width: 70%;
-            height: 80%;
-            align-self: center;
+            height: 70%;
+            align-self: start;
             justify-self: center;
-            text-align: right;
+        }
+
+        #general-power, #general-accelaration, #general-speed {
+            width: 100%;
+            line-height: 1em;
+        }
+
+        #general-power > .title-small, #general-accelaration > .title-small, #general-speed > .title-small {
+            font-size: var(--fifth-size);
         }
     
     #img-div {
@@ -671,24 +683,34 @@
                 animation: none;
             }
     
-        #paragraph-presenting {
-            grid-area: 4 / 1 / 6 / 2;
-            padding: 0px;
-            width: 70%;
-            height: 80%;
-            align-self: center;
-            justify-self: center;
-            text-align: left;
-        }
-
-        #general-specs {
-            grid-area: 4 / 2 / 6 / 3;
-            width: 70%;
-            height: 80%;
-            align-self: center;
-            justify-self: center;
-            text-align: right;
-        }
+            #paragraph-presenting {
+                grid-area: 4 / 1 / 6 / 2;
+                padding: 0px;
+                width: 70%;
+                height: 80%;
+                align-self: start;
+                justify-self: center;
+                text-align: left;
+    
+            }
+    
+            #general-specs {
+                grid-area: 4 / 2 / 6 / 3;
+                flex-direction: column;
+                width: 80%;
+                height: 70%;
+                align-self: start;
+                justify-self: center;
+            }
+    
+            #general-power, #general-accelaration, #general-speed {
+                width: 100%;
+                line-height: 1em;
+            }
+    
+            #general-power > .title-small, #general-accelaration > .title-small, #general-speed > .title-small {
+                font-size: var(--fifth-size);
+            }
     
     #img-div {
         grid-template-columns: 100vw;
@@ -1003,24 +1025,34 @@
                 animation: none;
             }
     
-        #paragraph-presenting {
-            grid-area: 4 / 1 / 6 / 2;
-            padding: 0px;
-            width: 70%;
-            height: 80%;
-            align-self: center;
-            justify-self: center;
-            text-align: left;
-        }
-
-        #general-specs {
-            grid-area: 4 / 2 / 6 / 3;
-            width: 70%;
-            height: 80%;
-            align-self: center;
-            justify-self: center;
-            text-align: right;
-        }
+            #paragraph-presenting {
+                grid-area: 4 / 1 / 6 / 2;
+                padding: 0px;
+                width: 70%;
+                height: 80%;
+                align-self: start;
+                justify-self: center;
+                text-align: left;
+    
+            }
+    
+            #general-specs {
+                grid-area: 4 / 2 / 6 / 3;
+                flex-direction: column;
+                width: 80%;
+                height: 70%;
+                align-self: start;
+                justify-self: center;
+            }
+    
+            #general-power, #general-accelaration, #general-speed {
+                width: 100%;
+                line-height: 1em;
+            }
+    
+            #general-power > .title-small, #general-accelaration > .title-small, #general-speed > .title-small {
+                font-size: var(--fifth-size);
+            }
     
     #img-div {
         grid-template-columns: 100vw;
