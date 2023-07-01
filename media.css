@@ -194,6 +194,16 @@
         }
 }
 
+
+/*   ////////////////////////////////////////////////////////////////////   */
+
+@media screen and (min-width: 300px) and (max-width: 880px) { 
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
 @media screen and (min-width: 700px) and (max-width: 880px) {
     :root {
         --first-size: 8px;
@@ -255,8 +265,6 @@
             font-size: 32px;
         }
 }
-
-/*   ////////////////////////////////////////////////////////////////////   */
 
 @media screen and (min-width: 600px) and (max-width: 700px) {
     :root {
