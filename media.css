@@ -202,8 +202,7 @@
         width: 100% !important;
         overflow-x: hidden !important; 
     }
-
-
+    
 }
 
 @media screen and (min-width: 700px) and (max-width: 880px) {
@@ -268,6 +267,257 @@
         }
 }
 
+@media screen and (min-width: 300px) and (max-width: 700px) { 
+    body {
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat( 7, 100vh);
+        font-family: var(--second-font-family);
+    }
+
+    .title-small {
+        margin-left: 0px;
+    }
+
+    .title-big {
+        margin-left: 0px;
+    }
+
+    #image {
+        grid-area: 2 / 1 / 3 / 3;
+        width: 90vw;
+        margin: 0px;
+        justify-self: end;
+    }
+
+        #car-bar {
+            grid-area: 2 / 1 / 3 / 3;
+            width: 100%;
+            height: 90%;
+            align-self: start;
+            z-index: -1;
+            background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 20%, rgba(252,176,69,1) 40%, rgba(252,176,69,1) 60%, rgba(253,29,29,1) 80%, rgba(131,58,180,1) 100%);
+            background-size: 400%;
+            animation: title-bar 15s ease infinite;
+        }    
+
+    #title {
+        grid-area: 3 / 1 / 4 / 3;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        align-items: center;
+    }
+
+        #title-presenting-small {
+            grid-area: 1 / 1 / 2 / 2;
+            align-self: end;
+            margin-left: 5%;
+        }
+
+        #title-presenting-big {
+            grid-area: 2 / 1 / 3 / 2;
+            margin-left: 5%;
+        }
+
+        #title-bar {
+            grid-area: 1 / 1 / 3 / 2;
+            background: none;
+            animation: none;
+        }
+
+        #img-div {
+            grid-template-columns: 100vw;
+            grid-template-rows: auto 10vh 20vh auto auto;
+        }
+        
+            #image-sticker {
+                grid-area: 2 / 1 / 3 / 2;
+                width: 80vw;
+            }
+    
+            #presenting-text {
+                grid-area: 3 / 1 / 4 / 2;
+                width: 80%;
+                align-self: start;
+            }
+            
+            #image-figure {
+                grid-area: 4 / 1 / 5 / 2;
+                width: 100vw;
+            }
+
+        #inspiration-title {
+            padding-top: 0px;
+        }
+        
+            #title-inspiration-small {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+    
+            #title-inspiration-big {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+    
+            #title-inspiration-big > span {
+                display: none;
+            }
+        
+        #inspiration-section-pics {
+            grid-area: 2 / 1 / 5 / 4;
+            display: flex;
+            flex-direction: column;
+        }  
+        
+            .image-size {
+                width: 100vw;
+                height: 20vh;
+                object-fit: cover;
+            }
+        
+            .image-size:hover {
+                animation: none;
+            }
+
+        #container-gallery {
+            grid-template-rows: repeat(2, auto);
+        }
+    
+            .element-gallery {
+                width: 100vw;
+                height: 37.5vh;
+            }
+    
+            #element-1 {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+    
+            #element-2 {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+    
+            #element-3 {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+    
+            #element-4 {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+    
+            #element-5 {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+    
+            #element-6 {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+    #technical-specs {
+        grid-template-columns: 100vw;
+        grid-template-rows: 10vh auto auto auto 5vh;
+    }
+
+        #technical-title {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+                .technical-title {
+                    font-size: var(--fifth-size);
+                    grid-area: 1 / 1 / 2 / 2;
+                    align-self: end !important;
+                }
+    
+                .technical-container {
+                    grid-area: 2 / 1 / 3 / 2;
+                    padding: var(--fifth-size) 5vw;
+                    width: 85vw;
+                }
+    
+                .technical-content-grid {
+                    grid-template-rows: 20% auto;
+                }
+    
+            #power-unit {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            #power-unit:hover {
+                animation: switch-contrast-color 1s ease forwards;
+            }
+    
+            #performance {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+    
+            #performance:hover {
+                animation: switch-contrast-color 1s ease forwards;
+            }
+
+            #body {
+                grid-area: 4 / 1 / 5 / 2;
+            }
+
+            #body:hover {
+                animation: switch-contrast-color 1s ease forwards;
+            }
+
+    #resume {
+        grid-template-rows: 30vh 10vh auto;
+    }
+    
+        #resume-image {
+            grid-area: 3 / 1 / 4 / 2;
+            width: 100vw;
+        }
+    
+        #text-resume {
+            grid-area: 1 / 1 / 2 / 2;
+            width: 60vw;
+            align-self: end;
+            color: var(--first-color);
+        }
+    
+        #buttom-buy {
+            grid-area: 2 / 1 / 3 / 2;
+            padding: 1em 3em 1em 3em;
+        }
+    
+        #buttom-buy:hover {
+            animation:grow-scale-resume-buttom 1s ease forwards;
+        }
+
+        #footer-space-bar {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        #footer-title-description {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+            #footer-content-description {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+
+        #footer-title-academic {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+
+            #footer-content-academic {
+                grid-area: 5 / 1 / 6 / 2;
+            }
+
+        #footer-title-contact {
+            grid-area: 6 / 1 / 7 / 2;
+        }
+
+            #footer-content-contact {
+                grid-area: 7 / 1 / 8 / 2;
+            }
+
+        #footer-down-bar {
+            grid-area: 8 / 1 / 9 / 2;
+        }
+}
+
+
 @media screen and (min-width: 600px) and (max-width: 700px) {
     :root {
         --first-size: 10px;
@@ -280,67 +530,11 @@
 
     }
     
-    body {
-        grid-template-columns: 100vw;
-        grid-template-rows: repeat( 7, 100vh);
-        font-family: var(--second-font-family);
-    }
-    
-        .title-small {
-            margin-left: 0px;
-        }
-    
-        .title-big {
-            margin-left: 0px;
-        }
-
     #title-container {
         grid-template-columns: repeat( 2, 50vw);
         grid-template-rows: repeat( 3, 20vh) repeat( 2, auto);
     }
 
-        #image {
-            grid-area: 2 / 1 / 3 / 3;
-            width: 90vw;
-            margin: 0px;
-            justify-self: end;
-        }
-
-            #car-bar {
-                grid-area: 2 / 1 / 3 / 3;
-                width: 100%;
-                height: 90%;
-                align-self: start;
-                z-index: -1;
-                background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 20%, rgba(252,176,69,1) 40%, rgba(252,176,69,1) 60%, rgba(253,29,29,1) 80%, rgba(131,58,180,1) 100%);
-                background-size: 400%;
-                animation: title-bar 15s ease infinite;
-            }    
-
-        #title {
-            grid-area: 3 / 1 / 4 / 3;
-            display: grid;
-            grid-template-rows: 50% 50%;
-            align-items: center;
-        }
-    
-            #title-presenting-small {
-                grid-area: 1 / 1 / 2 / 2;
-                align-self: end;
-                margin-left: 5%;
-            }
-    
-            #title-presenting-big {
-                grid-area: 2 / 1 / 3 / 2;
-                margin-left: 5%;
-            }
-    
-            #title-bar {
-                grid-area: 1 / 1 / 3 / 2;
-                background: none;
-                animation: none;
-            }
-    
         #paragraph-presenting {
             grid-area: 4 / 1 / 6 / 2;
             padding: 0px;
@@ -349,7 +543,6 @@
             align-self: start;
             justify-self: center;
             text-align: left;
-
         }
 
         #general-specs {
@@ -369,64 +562,11 @@
         #general-power > .title-small, #general-accelaration > .title-small, #general-speed > .title-small {
             font-size: var(--fifth-size);
         }
-    
-    #img-div {
-        grid-template-columns: 100vw;
-        grid-template-rows: auto 10vh 20vh auto auto;
-    }
-    
-        #image-sticker {
-            grid-area: 2 / 1 / 3 / 2;
-            width: 80vw;
-        }
 
-        #presenting-text {
-            grid-area: 3 / 1 / 4 / 2;
-            width: 80%;
-            align-self: start;
-        }
-        
-        #image-figure {
-            grid-area: 4 / 1 / 5 / 2;
-            width: 100vw;
-        }
- 
     #inspiration {
         grid-template-columns: 100vw;
         grid-template-rows: repeat( 5, auto);
     }
-    
-        #inspiration-title {
-            padding-top: 0px;
-        }
-    
-            #title-inspiration-small {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-
-            #title-inspiration-big {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-
-            #title-inspiration-big > span {
-                display: none;
-            }
-    
-        #inspiration-section-pics {
-            grid-area: 2 / 1 / 5 / 4;
-            display: flex;
-            flex-direction: column;
-        }  
-    
-            .image-size {
-                width: 100vw;
-                height: 20vh;
-                object-fit: cover;
-            }
-    
-            .image-size:hover {
-                animation: none;
-            }
 
         #inspiration-info {
             grid-area: 5 / 1 / 6 / 2;
@@ -450,114 +590,7 @@
         #porsche-logotipo {
             width: 250px;
         }
-    
-        #container-gallery {
-            grid-template-rows: repeat(2, auto);
-        }
-    
-            .element-gallery {
-                width: 100vw;
-                height: 37.5vh;
-            }
-    
-            #element-1 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-2 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-            #element-3 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-4 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-            #element-5 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-6 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-    #technical-specs {
-        grid-template-columns: 100vw;
-        grid-template-rows: 10vh auto auto auto 5vh;
-    }
 
-        #technical-title {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-
-                .technical-title {
-                    font-size: var(--fifth-size);
-                    grid-area: 1 / 1 / 2 / 2;
-                    align-self: end !important;
-                }
-    
-                .technical-container {
-                    grid-area: 2 / 1 / 3 / 2;
-                    padding: var(--fifth-size) 5vw;
-                    width: 85vw;
-                }
-    
-                .technical-content-grid {
-                    grid-template-rows: 20% auto;
-                }
-    
-            #power-unit {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-
-            #power-unit:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-    
-            #performance {
-                grid-area: 3 / 1 / 4 / 2;
-            }
-    
-            #performance:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-
-            #body {
-                grid-area: 4 / 1 / 5 / 2;
-            }
-
-            #body:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-    
-    #resume {
-        grid-template-rows: 30vh 10vh auto;
-    }
-    
-        #resume-image {
-            grid-area: 3 / 1 / 4 / 2;
-            width: 100vw;
-        }
-    
-        #text-resume {
-            grid-area: 1 / 1 / 2 / 2;
-            width: 60vw;
-            align-self: end;
-            color: var(--first-color);
-        }
-    
-        #buttom-buy {
-            grid-area: 2 / 1 / 3 / 2;
-            padding: 1em 3em 1em 3em;
-        }
-    
-        #buttom-buy:hover {
-            animation:grow-scale-resume-buttom 1s ease forwards;
-        }
-    
     #footer {
         grid-area: 7 / 1 / 8 / 2;
         display: grid;
@@ -576,37 +609,8 @@
             font-size: 18px;
         }
     
-        #footer-space-bar {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-    
         #footer-title-description {
-            grid-area: 2 / 1 / 3 / 2;
             font-size: 60px;
-        }
-    
-            #footer-content-description {
-                grid-area: 3 / 1 / 4 / 2;
-            }
-    
-        #footer-title-academic {
-            grid-area: 4 / 1 / 5 / 2;
-        }
-    
-            #footer-content-academic {
-                grid-area: 5 / 1 / 6 / 2;
-            }
-    
-        #footer-title-contact {
-            grid-area: 6 / 1 / 7 / 2;
-        }
-    
-            #footer-content-contact {
-                grid-area: 7 / 1 / 8 / 2;
-            }
-    
-        #footer-down-bar {
-            grid-area: 8 / 1 / 9 / 2;
         }
 }
 
@@ -621,67 +625,11 @@
         --seventh-size: 50px; 
 
     }
-    
-    body {
-        grid-template-columns: 100vw;
-        grid-template-rows: repeat( 7, 100vh);
-        font-family: var(--second-font-family);
-    }
-    
-        .title-small {
-            margin-left: 0px;
-        }
-    
-        .title-big {
-            margin-left: 0px;
-        }
 
     #title-container {
         grid-template-columns: repeat( 2, 50vw);
         grid-template-rows: repeat( 2, 20vh) 15vh repeat( 2, auto);
     }
-
-        #image {
-            grid-area: 2 / 1 / 3 / 3;
-            width: 90vw;
-            margin: 0px;
-            justify-self: end;
-        }
-
-            #car-bar {
-                grid-area: 2 / 1 / 3 / 3;
-                width: 100%;
-                height: 90%;
-                align-self: start;
-                z-index: -1;
-                background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 20%, rgba(252,176,69,1) 40%, rgba(252,176,69,1) 60%, rgba(253,29,29,1) 80%, rgba(131,58,180,1) 100%);
-                background-size: 400%;
-                animation: title-bar 15s ease infinite;
-            }    
-
-        #title {
-            grid-area: 3 / 1 / 4 / 3;
-            display: grid;
-            grid-template-rows: 50% 50%;
-            align-items: center;
-        }
-    
-            #title-presenting-small {
-                grid-area: 1 / 1 / 2 / 2;
-                align-self: end;
-                margin-left: 5%;
-            }
-    
-            #title-presenting-big {
-                grid-area: 2 / 1 / 3 / 2;
-                margin-left: 5%;
-            }
-    
-            #title-bar {
-                grid-area: 1 / 1 / 3 / 2;
-                background: none;
-                animation: none;
-            }
     
             #paragraph-presenting {
                 grid-area: 4 / 1 / 6 / 2;
@@ -711,64 +659,11 @@
             #general-power > .title-small, #general-accelaration > .title-small, #general-speed > .title-small {
                 font-size: var(--fifth-size);
             }
-    
-    #img-div {
-        grid-template-columns: 100vw;
-        grid-template-rows: auto 10vh 20vh auto auto;
-    }
-    
-        #image-sticker {
-            grid-area: 2 / 1 / 3 / 2;
-            width: 80vw;
-        }
 
-        #presenting-text {
-            grid-area: 3 / 1 / 4 / 2;
-            width: 80%;
-            align-self: start;
-        }
-        
-        #image-figure {
-            grid-area: 4 / 1 / 5 / 2;
-            width: 100vw;
-        }
- 
     #inspiration {
         grid-template-columns: 100vw;
         grid-template-rows: 20vh repeat( 4, auto);
     }
-    
-        #inspiration-title {
-            padding-top: 0px;
-        }
-    
-            #title-inspiration-small {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-
-            #title-inspiration-big {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-
-            #title-inspiration-big > span {
-                display: none;
-            }
-    
-        #inspiration-section-pics {
-            grid-area: 2 / 1 / 5 / 4;
-            display: flex;
-            flex-direction: column;
-        }  
-    
-            .image-size {
-                width: 100vw;
-                height: 20vh;
-                object-fit: cover;
-            }
-    
-            .image-size:hover {
-                animation: none;
-            }
 
         #inspiration-info {
             grid-area: 5 / 1 / 6 / 2;
@@ -792,114 +687,7 @@
         #porsche-logotipo {
             width: 150px;
         }
-    
-        #container-gallery {
-            grid-template-rows: repeat(2, auto);
-        }
-    
-            .element-gallery {
-                width: 100vw;
-                height: 37.5vh;
-            }
-    
-            #element-1 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-2 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-            #element-3 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-4 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-            #element-5 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-6 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-    #technical-specs {
-        grid-template-columns: 100vw;
-        grid-template-rows: 10vh auto auto auto 5vh;
-    }
 
-        #technical-title {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-
-                .technical-title {
-                    font-size: var(--fifth-size);
-                    grid-area: 1 / 1 / 2 / 2;
-                    align-self: end !important;
-                }
-    
-                .technical-container {
-                    grid-area: 2 / 1 / 3 / 2;
-                    padding: var(--fifth-size) 5vw;
-                    width: 85vw;
-                }
-    
-                .technical-content-grid {
-                    grid-template-rows: 20% auto;
-                }
-    
-            #power-unit {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-
-            #power-unit:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-    
-            #performance {
-                grid-area: 3 / 1 / 4 / 2;
-            }
-    
-            #performance:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-
-            #body {
-                grid-area: 4 / 1 / 5 / 2;
-            }
-
-            #body:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-    
-    #resume {
-        grid-template-rows: 30vh 10vh auto;
-    }
-    
-        #resume-image {
-            grid-area: 3 / 1 / 4 / 2;
-            width: 100vw;
-        }
-    
-        #text-resume {
-            grid-area: 1 / 1 / 2 / 2;
-            width: 60vw;
-            align-self: end;
-            color: var(--first-color);
-        }
-    
-        #buttom-buy {
-            grid-area: 2 / 1 / 3 / 2;
-            padding: 1em 3em 1em 3em;
-        }
-    
-        #buttom-buy:hover {
-            animation:grow-scale-resume-buttom 1s ease forwards;
-        }
-    
     #footer {
         grid-area: 7 / 1 / 8 / 2;
         display: grid;
@@ -918,37 +706,8 @@
             font-size: 18px;
         }
     
-        #footer-space-bar {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-    
         #footer-title-description {
-            grid-area: 2 / 1 / 3 / 2;
             font-size: 60px;
-        }
-    
-            #footer-content-description {
-                grid-area: 3 / 1 / 4 / 2;
-            }
-    
-        #footer-title-academic {
-            grid-area: 4 / 1 / 5 / 2;
-        }
-    
-            #footer-content-academic {
-                grid-area: 5 / 1 / 6 / 2;
-            }
-    
-        #footer-title-contact {
-            grid-area: 6 / 1 / 7 / 2;
-        }
-    
-            #footer-content-contact {
-                grid-area: 7 / 1 / 8 / 2;
-            }
-    
-        #footer-down-bar {
-            grid-area: 8 / 1 / 9 / 2;
         }
 }
 
@@ -963,67 +722,11 @@
         --seventh-size: 40px; 
 
     }
-    
-    body {
-        grid-template-columns: 100vw;
-        grid-template-rows: repeat( 7, 100vh);
-        font-family: var(--second-font-family);
-    }
-    
-        .title-small {
-            margin-left: 0px;
-        }
-    
-        .title-big {
-            margin-left: 0px;
-        }
 
     #title-container {
         grid-template-columns: repeat( 2, 50vw);
         grid-template-rows: repeat( 2, 20vh) 15vh repeat( 2, auto);
     }
-
-        #image {
-            grid-area: 2 / 1 / 3 / 3;
-            width: 90vw;
-            margin: 0px;
-            justify-self: end;
-        }
-
-            #car-bar {
-                grid-area: 2 / 1 / 3 / 3;
-                width: 100%;
-                height: 90%;
-                align-self: start;
-                z-index: -1;
-                background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 20%, rgba(252,176,69,1) 40%, rgba(252,176,69,1) 60%, rgba(253,29,29,1) 80%, rgba(131,58,180,1) 100%);
-                background-size: 400%;
-                animation: title-bar 15s ease infinite;
-            }    
-
-        #title {
-            grid-area: 3 / 1 / 4 / 3;
-            display: grid;
-            grid-template-rows: 50% 50%;
-            align-items: center;
-        }
-    
-            #title-presenting-small {
-                grid-area: 1 / 1 / 2 / 2;
-                align-self: end;
-                margin-left: 5%;
-            }
-    
-            #title-presenting-big {
-                grid-area: 2 / 1 / 3 / 2;
-                margin-left: 5%;
-            }
-    
-            #title-bar {
-                grid-area: 1 / 1 / 3 / 2;
-                background: none;
-                animation: none;
-            }
     
             #paragraph-presenting {
                 grid-area: 4 / 1 / 6 / 2;
@@ -1053,64 +756,11 @@
             #general-power > .title-small, #general-accelaration > .title-small, #general-speed > .title-small {
                 font-size: var(--fifth-size);
             }
-    
-    #img-div {
-        grid-template-columns: 100vw;
-        grid-template-rows: auto 10vh 20vh auto auto;
-    }
-    
-        #image-sticker {
-            grid-area: 2 / 1 / 3 / 2;
-            width: 80vw;
-        }
 
-        #presenting-text {
-            grid-area: 3 / 1 / 4 / 2;
-            width: 80%;
-            align-self: start;
-        }
-        
-        #image-figure {
-            grid-area: 4 / 1 / 5 / 2;
-            width: 100vw;
-        }
- 
     #inspiration {
         grid-template-columns: 100vw;
         grid-template-rows: 20vh repeat( 4, auto);
     }
-    
-        #inspiration-title {
-            padding-top: 0px;
-        }
-    
-            #title-inspiration-small {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-
-            #title-inspiration-big {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-
-            #title-inspiration-big > span {
-                display: none;
-            }
-    
-        #inspiration-section-pics {
-            grid-area: 2 / 1 / 5 / 4;
-            display: flex;
-            flex-direction: column;
-        }  
-    
-            .image-size {
-                width: 100vw;
-                height: 20vh;
-                object-fit: cover;
-            }
-    
-            .image-size:hover {
-                animation: none;
-            }
 
         #inspiration-info {
             grid-area: 5 / 1 / 6 / 2;
@@ -1135,113 +785,6 @@
             width: 100px;
         }
     
-        #container-gallery {
-            grid-template-rows: repeat(2, auto);
-        }
-    
-            .element-gallery {
-                width: 100vw;
-                height: 37.5vh;
-            }
-    
-            #element-1 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-2 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-            #element-3 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-4 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-            #element-5 {
-                grid-area: 1 / 1 / 2 / 2;
-            }
-    
-            #element-6 {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-    
-    #technical-specs {
-        grid-template-columns: 100vw;
-        grid-template-rows: 10vh auto auto auto 5vh;
-    }
-
-        #technical-title {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-
-                .technical-title {
-                    font-size: var(--fifth-size);
-                    grid-area: 1 / 1 / 2 / 2;
-                    align-self: end !important;
-                }
-    
-                .technical-container {
-                    grid-area: 2 / 1 / 3 / 2;
-                    padding: var(--fifth-size) 5vw;
-                    width: 85vw;
-                }
-    
-                .technical-content-grid {
-                    grid-template-rows: 20% auto;
-                }
-    
-            #power-unit {
-                grid-area: 2 / 1 / 3 / 2;
-            }
-
-            #power-unit:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-    
-            #performance {
-                grid-area: 3 / 1 / 4 / 2;
-            }
-    
-            #performance:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-
-            #body {
-                grid-area: 4 / 1 / 5 / 2;
-            }
-
-            #body:hover {
-                animation: switch-contrast-color 1s ease forwards;
-            }
-    
-    #resume {
-        grid-template-rows: 30vh 10vh auto;
-    }
-    
-        #resume-image {
-            grid-area: 3 / 1 / 4 / 2;
-            width: 100vw;
-        }
-    
-        #text-resume {
-            grid-area: 1 / 1 / 2 / 2;
-            width: 60vw;
-            align-self: end;
-            color: var(--first-color);
-        }
-    
-        #buttom-buy {
-            grid-area: 2 / 1 / 3 / 2;
-            padding: 1em 3em 1em 3em;
-        }
-    
-        #buttom-buy:hover {
-            animation:grow-scale-resume-buttom 1s ease forwards;
-        }
-    
     #footer {
         grid-area: 7 / 1 / 8 / 2;
         display: grid;
@@ -1254,42 +797,13 @@
             font-size: 35px;
             padding: 0px 30px;
         }
-    
+
         .paragraph-footer {
             padding: 15px 30px;
             font-size: 14px;
         }
-    
-        #footer-space-bar {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-    
+
         #footer-title-description {
-            grid-area: 2 / 1 / 3 / 2;
             font-size: 50px;
-        }
-    
-            #footer-content-description {
-                grid-area: 3 / 1 / 4 / 2;
-            }
-    
-        #footer-title-academic {
-            grid-area: 4 / 1 / 5 / 2;
-        }
-    
-            #footer-content-academic {
-                grid-area: 5 / 1 / 6 / 2;
-            }
-    
-        #footer-title-contact {
-            grid-area: 6 / 1 / 7 / 2;
-        }
-    
-            #footer-content-contact {
-                grid-area: 7 / 1 / 8 / 2;
-            }
-    
-        #footer-down-bar {
-            grid-area: 8 / 1 / 9 / 2;
         }
 }
