@@ -52,3 +52,10 @@
         padding-right: 8em;
     }
 }
+
+@keyframes switch-contrast-color {
+    100% {
+        color: var(--first-color);
+        background-color: var(--third-color);
+    }
+}
