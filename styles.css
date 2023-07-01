@@ -21,10 +21,11 @@
 body {
     display: grid;
     grid-template-rows: repeat( 6, 100vh) 500px;
-    font-family: var(--second-font-family);
-    margin: 0px;
+    width: 100%;
     overflow-x: hidden;
     direction: ltr;
+    margin: 0px;
+    font-family: var(--second-font-family);
     background-color: var(--second-color);
     color: var(--third-color);
 }
