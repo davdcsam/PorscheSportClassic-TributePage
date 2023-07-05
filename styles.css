@@ -133,8 +133,6 @@ body {
     justify-items: center;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto 10vh 30vh auto;
-    background-color: var(--third-color) !important;
-    color: var(--first-color) !important;
 }
 
     #image-figure {
@@ -147,6 +145,7 @@ body {
         width: 600px;
         margin-bottom: var(--third-size);
         align-self: end;
+        filter: invert(1);
     }
 
     #presenting-text {
@@ -332,7 +331,6 @@ body {
     width: 100%;
     height: 100%;
     grid-template-rows: auto auto auto;
-    background-color: var(--third-color) !important;
 }
 
     #resume-image {
@@ -346,7 +344,6 @@ body {
         grid-area: 1 / 1 / 2 / 2;
         width: 30vw;
         align-self: end;
-        color: var(--first-color);
     }
 
     #buttom-buy {
